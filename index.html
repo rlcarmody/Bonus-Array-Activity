@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FavoriteBand</title>
+</head>
+
+<body>
+    <script>
+
+        const findBands = (band) => {
+            const favoriteBands = ['System of a Down', 
+                                    'Disturbed', 
+                                    'Incubus', 
+                                    'Radiohead', 
+                                    'Linkin Park',
+                                    'The Beatles',
+                                    'Michael Jackson'
+                                    ];
+
+            const favBandsLower = favoriteBands.map(x => x.toLocaleLowerCase());
+
+            if (favBandsLower.indexOf(band.toLowerCase()) < 0) {
+                return 'Nah. They\'re pretty lame';
+            }
+            return 'YEAH I LOVE THEM';
+        }
+
+        var userInput = prompt('What\'s your favorite band');
+        alert(findBands(userInput));
+        document.write(`Your favorite band is ${userInput}.`);
+
+    </script>
+</body>
+
+</html>
